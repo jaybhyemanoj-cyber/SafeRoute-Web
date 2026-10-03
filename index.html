@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeRoute AI — Walk smarter. Stay aware.</title>
+  <meta name="description" content="SafeRoute AI is an Android application for walking navigation, hazard reports, and safety-oriented route comparison. Walk smarter. Stay aware.">
+  <meta name="keywords" content="SafeRoute AI, Android APK download, walking navigation, hazard reports, route comparison, pedestrian safety, Android app">
+  
+  <!-- Open Graph & Twitter Cards -->
+  <meta property="og:title" content="SafeRoute AI — Walk smarter. Stay aware.">
+  <meta property="og:description" content="Explore walking routes, report hazards, and compare route options using available safety signals on your Android phone.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23059669'><path d='M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4zm0 6a3 3 0 110 6 3 3 0 010-6z'/></svg>">
+  
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo" aria-label="SafeRoute AI Home">
+        <div class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+          </svg>
+        </div>
+        <span>SafeRoute <span class="text-gradient">AI</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#installation" class="nav-link">Installation</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#download" class="nav-link">Download</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="#download" class="btn btn-secondary">Get App</a>
+        <a href="/downloads/saferoute-ai.apk" download="saferoute-ai.apk" class="btn btn-primary" id="hdrDownloadBtn">Download APK</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="shape-glow-1"></div>
+        <div class="shape-glow-2"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            ANDROID WALKING NAVIGATION
+          </div>
+
+          <h1 class="hero-headline">
+            Walk smarter.<br>
+            <span class="text-gradient">Stay aware.</span>
+          </h1>
+
+          <p class="hero-subtext">
+            SafeRoute AI helps pedestrians explore walking routes, view community hazard reports, and compare route options using safety-oriented signals. Built specifically for Android.
+          </p>
+
+          <div class="hero-actions">
+            <a id="heroDownloadBtn" href="/downloads/saferoute-ai.apk" download="saferoute-ai.apk" class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414C17.062 15.3414 16.689 15.7144 16.689 16.1754C16.689 16.6364 17.062 17.0094 17.523 17.0094C17.984 17.0094 18.357 16.6364 18.357 16.1754C18.357 15.7144 17.984 15.3414 17.523 15.3414ZM6.477 15.3414C6.016 15.3414 5.643 15.7144 5.643 16.1754C5.643 16.6364 6.016 17.0094 6.477 17.0094C6.938 17.0094 7.311 16.6364 7.311 16.1754C7.311 15.7144 6.938 15.3414 6.477 15.3414ZM16.035 8.78441L17.854 5.63341C18.004 5.37341 17.915 5.04141 17.655 4.89141C17.395 4.74141 17.063 4.83041 16.913 5.09041L15.042 8.33141C13.084 7.43841 10.916 7.43841 8.958 8.33141L7.087 5.09041C6.937 4.83041 6.605 4.74141 6.345 4.89141C6.085 5.04141 5.996 5.37341 6.146 5.63341L7.965 8.78441C4.372 10.7414 1.942 14.3784 1.5 18.5994H22.5C22.058 14.3784 19.628 10.7414 16.035 8.78441Z"/>
+              </svg>
+              Download for Android
+            </a>
+            
+            <a href="#features" class="btn btn-secondary btn-lg">
+              Explore Features
+            </a>
+          </div>
+
+          <div class="hero-trust-info">
+            <div class="trust-item">
+              <svg class="trust-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Signal-Aware Routes</span>
+            </div>
+            <div class="trust-item">
+              <svg class="trust-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>Hazard Reporting</span>
+            </div>
+            <div class="trust-item">
+              <svg class="trust-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Route Comparison</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Visual Mockup -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-mockup-glow"></div>
+          
+          <div class="hero-float-tag tag-1">
+            <div class="tag-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="tag-text">
+              <strong>Well-Lit Path Selected</strong>
+              <span>Signal comparison active</span>
+            </div>
+          </div>
+
+          <div class="hero-float-tag tag-2">
+            <div class="tag-icon" style="background:#fee2e2; color:#ef4444;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="tag-text">
+              <strong>Hazard Flagged</strong>
+              <span>Demo obstacle ahead</span>
+            </div>
+          </div>
+
+          <div class="phone-container">
+            <div class="phone-screen">
+              <div class="phone-notch">
+                <div class="camera-lens"></div>
+                <div class="speaker-grill"></div>
+              </div>
+
+              <div class="app-header">
+                <div class="app-search-bar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                  <input type="text" value="Central Station → Park East" readonly>
+                </div>
+              </div>
+
+              <!-- Vector Map Simulation -->
+              <div class="app-map-area">
+                <svg class="map-svg-layer" viewBox="0 0 300 400" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="routeGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#10b981" />
+                      <stop offset="100%" stop-color="#047857" />
+                    </linearGradient>
+                  </defs>
+
+                  <path class="road-line" d="M 30 380 Q 90 280 140 220 T 260 80" />
+                  <path class="road-line" d="M 10 200 L 290 200" />
+                  <path class="road-line-sec" d="M 80 50 L 80 350" />
+                  <path class="road-line-sec" d="M 210 50 L 210 350" />
+
+                  <path class="route-path-active" id="phoneRouteLine" d="M 90 300 C 110 250, 130 210, 160 170 C 190 130, 210 110, 225 100" />
+                </svg>
+
+                <div class="map-pin pin-user">
+                  <div class="pin-user-dot"></div>
+                </div>
+
+                <div class="map-pin pin-dest">
+                  <div class="pin-dest-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                    Destination
+                  </div>
+                </div>
+
+                <!-- Synthetic Hazard Markers -->
+                <div class="hazard-marker hazard-1" id="mockHazard1">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                  Demo Obstacle
+                </div>
+
+                <div class="hazard-marker hazard-2" style="top: 30%; left: 35%;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                  Demo Hazard
+                </div>
+              </div>
+
+              <div class="app-nav-card">
+                <div class="card-top">
+                  <div class="card-title">
+                    <span id="activeRouteName">Aware Route A</span>
+                    <span class="signal-chip">Optimal Signals</span>
+                  </div>
+                </div>
+                <div class="route-stats">
+                  <div>Dist: <span class="stat-bold">1.4 km</span></div>
+                  <div>Est: <span class="stat-bold">18 min</span></div>
+                  <div>Hazards: <span class="stat-bold" style="color:#10b981;">0 on path</span></div>
+                </div>
+                <button class="toggle-route-btn" id="mockToggleRouteBtn">
+                  ⚡ Toggle Route View
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">KEY CAPABILITIES</div>
+          <h2 class="section-title">Designed for pedestrian awareness.</h2>
+          <p class="section-subtitle">Core capabilities focus on walking navigation, community hazard reports, and signal-aware route comparison.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Walking Routes</h3>
+            <p class="feature-desc">Discover tailored walking paths with clear estimated walking distances and time for your daily commutes.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Hazard Reports</h3>
+            <p class="feature-desc">View reported hazards such as unlit streets, sidewalk obstacles, or construction areas submitted by the community.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Safety-Oriented Comparison</h3>
+            <p class="feature-desc">Compare multiple routing choices side by side based on reported hazard density and path signals before starting your journey.</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Android Optimized</h3>
+            <p class="feature-desc">Native Android APK designed for smooth performance, quick loading, and minimal battery overhead while walking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">SIMPLE PROCESS</div>
+          <h2 class="section-title">3 simple steps to a more aware walk.</h2>
+          <p class="section-subtitle">Get started in seconds with easy destination search and route comparison.</p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Enter your destination</h3>
+            <p class="step-desc">Input your destination in the SafeRoute AI Android app to find available walking options.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Compare route signals</h3>
+            <p class="step-desc">Review path choices, distance, and community-reported hazards before stepping out.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Walk with confidence</h3>
+            <p class="step-desc">Select your preferred route and follow on-screen guidance while remaining aware of your surroundings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Route Comparison Section -->
+    <section class="comparison-section">
+      <div class="container">
+        <div class="comparison-box">
+          <div class="comp-content">
+            <div class="badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border-color: rgba(16, 185, 129, 0.4);">
+              ROUTE SIGNALS DEMO
+            </div>
+            <h2>Comparing routes with signal awareness</h2>
+            <p>Standard navigation apps prioritize only physical distance. SafeRoute AI brings crowd-reported hazard signals into view so you can decide which path fits your preferences.</p>
+
+            <ul class="comp-list">
+              <li>
+                <div class="comp-check">✓</div>
+                <span>Visibility into community hazard reports</span>
+              </li>
+              <li>
+                <div class="comp-check">✓</div>
+                <span>Side-by-side distance & hazard count comparison</span>
+              </li>
+              <li>
+                <div class="comp-check">✓</div>
+                <span>Community-contributed alerts for temporary obstacles</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="comp-visual-card">
+            <div style="font-size:0.875rem; color: rgba(255,255,255,0.7); font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">
+              Visual Demo (Simulated Routes)
+            </div>
+
+            <!-- Route Option 1 -->
+            <div class="route-option-bar active-option">
+              <div class="opt-info">
+                <div class="opt-badge aware">Signal Aware</div>
+                <div>
+                  <div style="font-weight:700; font-size:0.95rem; color:#fff;">Route A (Main St & Ave C)</div>
+                  <div style="font-size:0.8rem; color:rgba(255,255,255,0.7);">0 reported hazards on route</div>
+                </div>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-weight:700; color:#10b981;">18 min</div>
+                <div style="font-size:0.75rem; color:rgba(255,255,255,0.6);">1.4 km</div>
+              </div>
+            </div>
+
+            <!-- Route Option 2 -->
+            <div class="route-option-bar">
+              <div class="opt-info">
+                <div class="opt-badge standard">Direct Line</div>
+                <div>
+                  <div style="font-weight:700; font-size:0.95rem; color:#fff;">Route B (Side Alley Shortcut)</div>
+                  <div style="font-size:0.8rem; color:#fca5a5;">2 active demo hazard reports</div>
+                </div>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-weight:700; color:#fff;">16 min</div>
+                <div style="font-size:0.75rem; color:rgba(255,255,255,0.6);">1.2 km</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+      <div class="container">
+        <div class="download-banner">
+          <div class="download-banner-bg" aria-hidden="true"></div>
+          
+          <div class="download-content">
+            <div class="badge" style="margin-bottom: 1rem;">ANDROID APK DOWNLOAD</div>
+            <h2 class="download-title">Download SafeRoute AI for Android</h2>
+            <p class="download-subtext">Walk smarter. Stay aware. Download the official Android APK directly below.</p>
+
+            <div class="download-status-box">
+              <div class="status-indicator" id="statusDot"></div>
+              <span id="statusText">Verifying APK file status...</span>
+            </div>
+
+            <!-- APK Specs Box (Shown when APK is verified) -->
+            <div class="apk-specs-card" id="apkSpecsCard" style="display:none;">
+              <div class="spec-pill">
+                <span class="spec-label">Package</span>
+                <strong id="apkFileNameSpec">saferoute-ai.apk</strong>
+              </div>
+              <div class="spec-pill">
+                <span class="spec-label">Version</span>
+                <strong id="apkVersionSpec">v1.0.0</strong>
+              </div>
+              <div class="spec-pill">
+                <span class="spec-label">File Size</span>
+                <strong id="apkSizeSpec">58.9 MB</strong>
+              </div>
+              <div class="spec-pill">
+                <span class="spec-label">Compatibility</span>
+                <strong>Android 8.0+</strong>
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+              <a id="mainDownloadBtn" href="/downloads/saferoute-ai.apk" download="saferoute-ai.apk" class="btn btn-primary btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+                </svg>
+                Download for Android (APK)
+              </a>
+            </div>
+
+            <div style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--slate-600);">
+              Designed exclusively for <strong>Android OS devices</strong> • Direct APK installation
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Guide Section -->
+    <section class="install-section" id="installation">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">INSTALLATION GUIDE</div>
+          <h2 class="section-title">How to install the APK on Android</h2>
+          <p class="section-subtitle">Follow these 4 simple steps to install SafeRoute AI directly on your Android phone.</p>
+        </div>
+
+        <div class="install-grid">
+          <!-- Step 1 -->
+          <div class="install-card">
+            <div class="install-num">01</div>
+            <h3 style="font-size:1.1rem; color:var(--slate-900);">Download APK</h3>
+            <p class="install-text">Tap the <strong>Download for Android</strong> button above to download <code>saferoute-ai.apk</code> to your device.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="install-card">
+            <div class="install-num">02</div>
+            <h3 style="font-size:1.1rem; color:var(--slate-900);">Open Downloaded File</h3>
+            <p class="install-text">Open the downloaded <code>.apk</code> file from your browser notification bar or My Files / Downloads app.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="install-card">
+            <div class="install-num">03</div>
+            <h3 style="font-size:1.1rem; color:var(--slate-900);">Allow Installation Prompt</h3>
+            <p class="install-text">If Android prompts "Install unknown apps", tap <strong>Settings</strong> and enable permission for your browser or file manager.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="install-card">
+            <div class="install-num">04</div>
+            <h3 style="font-size:1.1rem; color:var(--slate-900);">Complete Installation</h3>
+            <p class="install-text">Tap <strong>Install</strong>, complete setup, and open SafeRoute AI to begin exploring walking routes.</p>
+          </div>
+        </div>
+
+        <!-- Android Notice Box -->
+        <div class="install-warning-box">
+          <div class="warning-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div>
+            <strong style="display:block; margin-bottom: 4px;">Android Device Notice</strong>
+            <span>SafeRoute AI is built for Android smartphones. If prompted with standard Android security warnings regarding direct APK downloads, grant installation permissions to proceed.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">FREQUENTLY ASKED QUESTIONS</div>
+          <h2 class="section-title">Everything you need to know</h2>
+          <p class="section-subtitle">Common questions about downloading, installing, and using SafeRoute AI on Android.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is SafeRoute AI built specifically for Android?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. SafeRoute AI is an Android application designed for smartphones running Android 8.0 and above. An iOS version may be considered in future updates.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does SafeRoute AI calculate route awareness?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>SafeRoute AI evaluates available pedestrian paths by combining route distance data with community-reported hazards and signal indicators (such as lighting or path obstructions), giving you a side-by-side view before you walk.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Does SafeRoute AI guarantee a 100% safe route?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. No application can guarantee physical safety. SafeRoute AI provides route comparison insights based on available community and signal data. Pedestrians should always remain vigilant and pay attention to real-world conditions.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Why does Android ask for "Unknown Sources" permission?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>When an app is downloaded directly as an <code>.apk</code> file via web browser rather than through the Play Store, Android displays a standard safety prompt asking for permission to install third-party packages. SafeRoute AI is verified and safe to install.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Where is the original Flutter build path located?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>When you build the Flutter app using <code>flutter build apk --release</code>, the compiled binary is output to <code>build/app/outputs/flutter-apk/app-release.apk</code>. It is then copied into the web project's <code>public/downloads/saferoute-ai.apk</code> directory for direct download.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer & Disclaimer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Footer Column 1: Brand -->
+        <div class="footer-brand">
+          <a href="#" class="brand-logo" style="color:#fff;">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+              </svg>
+            </div>
+            <span>SafeRoute AI</span>
+          </a>
+          <p>Walk smarter. Stay aware. Walking navigation & hazard reporting for Android.</p>
+        </div>
+
+        <!-- Footer Column 2: Quick Links -->
+        <div>
+          <h4 style="color:#fff; margin-bottom: 1.25rem; font-size:1rem;">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#installation">Installation Guide</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#download">Download APK</a></li>
+            <li><a href="#" id="openPrivacyModalBtn">Privacy Info</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3: Safety Disclaimer -->
+        <div>
+          <div class="disclaimer-card">
+            <div class="disclaimer-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Safety Disclaimer
+            </div>
+            <p style="font-size:0.8rem;">
+              Safety information relies on available community reports and map signals. SafeRoute AI does not guarantee route safety. Pedestrians must stay alert and observe their physical surroundings. Map graphics and hazard pins shown on this landing page are synthetic visual demonstrations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 SafeRoute AI. All rights reserved.</div>
+        <div style="color:var(--slate-500);">Android APK Release v1.0.0</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Missing APK Instructions -->
+  <div class="modal-backdrop" id="apkModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeApkModal" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="modal-header-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </div>
+
+      <h3 class="modal-title">APK File Instructions</h3>
+      <p class="modal-body-text">
+        The Android APK file should be placed at <code>public/downloads/saferoute-ai.apk</code>.
+      </p>
+      <p class="modal-body-text" style="font-size: 0.85rem; color: var(--slate-600);">
+        If building from your Flutter workspace, copy the release APK using:
+      </p>
+
+      <div class="code-filepath">
+        <span id="targetFilePath">Copy-Item -Path "build\app\outputs\flutter-apk\app-release.apk" -Destination "public\downloads\saferoute-ai.apk"</span>
+        <button class="copy-btn" id="copyPathBtn">Copy Command</button>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%; margin-top:0.5rem;" id="modalGotItBtn">Understood</button>
+    </div>
+  </div>
+
+  <!-- Modal for Privacy Information -->
+  <div class="modal-backdrop" id="privacyModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closePrivacyModal" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      
+      <div class="modal-header-icon" style="background:#d1fae5; color:var(--primary-deep);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+
+      <h3 class="modal-title">Privacy Policy & Transparency</h3>
+      <p class="modal-body-text">
+        SafeRoute AI is designed with user privacy at its core:
+      </p>
+      <ul style="margin-left:1.25rem; font-size:0.9rem; color:var(--slate-600); margin-bottom:1.25rem; display:flex; flex-direction:column; gap:0.5rem;">
+        <li>Location data is processed locally on your Android device during active navigation.</li>
+        <li>Hazard reports submitted to the community do not collect personal identify data.</li>
+        <li>No third-party trackers or credentials are embedded in this static download website.</li>
+      </ul>
+
+      <button class="btn btn-secondary" style="width:100%;" id="closePrivacyBtn">Close</button>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
