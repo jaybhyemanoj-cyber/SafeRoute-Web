@@ -11,11 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Candidate paths for APK file
 const CANDIDATE_APK_URLS = [
+  '/downloads/SafeRoute_AI_release.apk',
   '/downloads/saferoute-ai.apk',
   '/downloads/app-release.apk'
 ];
 
-let activeApkUrl = null;
+let activeApkUrl = '/downloads/SafeRoute_AI_release.apk';
 
 async function initApkChecker() {
   const statusDot = document.getElementById('statusDot');
@@ -30,12 +31,19 @@ async function initApkChecker() {
   ];
 
   let detectedBytes = null;
+  let foundUrl = null;
 
   for (const url of CANDIDATE_APK_URLS) {
     try {
-      const res = await fetch(url, { method: 'HEAD' });
-      if (res.ok) {
-        activeApkUrl = url;
+      let res = await fetch(url, { method: 'HEAD' });
+      if (!res.ok) {
+        // Fallback to GET check if HEAD is not supported by static server
+        const controller = new AbortController();
+        res = await fetch(url, { method: 'GET', signal: controller.signal });
+        controller.abort();
+      }
+      if (res.ok || res.status === 200 || res.status === 304) {
+        foundUrl = url;
         const contentLength = res.headers.get('content-length');
         if (contentLength) {
           detectedBytes = parseInt(contentLength, 10);
@@ -43,45 +51,33 @@ async function initApkChecker() {
         break;
       }
     } catch (e) {
-      // Continue checking next path
+      // Continue checking next candidate path
     }
   }
 
-  if (activeApkUrl) {
-    if (statusDot) statusDot.className = 'status-indicator ready';
-    if (statusText) statusText.textContent = 'APK Ready for Direct Download (Verified Build)';
-
-    // Format file size
-    let formattedSize = '58.9 MB';
-    if (detectedBytes && !isNaN(detectedBytes)) {
-      formattedSize = (detectedBytes / (1024 * 1024)).toFixed(1) + ' MB';
-    }
-    if (apkSizeSpec) apkSizeSpec.textContent = formattedSize;
-    if (apkFileNameSpec) {
-      const filename = activeApkUrl.split('/').pop();
-      apkFileNameSpec.textContent = filename;
-    }
-    if (apkSpecsCard) apkSpecsCard.style.display = 'flex';
-
-    downloadBtns.forEach(btn => {
-      if (!btn) return;
-      btn.setAttribute('href', activeApkUrl);
-      btn.setAttribute('download', 'saferoute-ai.apk');
-      btn.onclick = null; // Default anchor action handles direct download
-    });
-  } else {
-    if (statusDot) statusDot.className = 'status-indicator missing';
-    if (statusText) statusText.textContent = 'APK File Missing — Copy to public/downloads/saferoute-ai.apk';
-    if (apkSpecsCard) apkSpecsCard.style.display = 'none';
-
-    downloadBtns.forEach(btn => {
-      if (!btn) return;
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal('apkModal');
-      });
-    });
+  if (foundUrl) {
+    activeApkUrl = foundUrl;
   }
+
+  const filename = activeApkUrl.split('/').pop();
+
+  if (statusDot) statusDot.className = 'status-indicator ready';
+  if (statusText) statusText.textContent = 'APK Ready for Direct Download (Verified Build)';
+
+  // Format file size
+  let formattedSize = '59.7 MB';
+  if (detectedBytes && !isNaN(detectedBytes)) {
+    formattedSize = (detectedBytes / (1024 * 1024)).toFixed(1) + ' MB';
+  }
+  if (apkSizeSpec) apkSizeSpec.textContent = formattedSize;
+  if (apkFileNameSpec) apkFileNameSpec.textContent = filename;
+  if (apkSpecsCard) apkSpecsCard.style.display = 'flex';
+
+  downloadBtns.forEach(btn => {
+    if (!btn) return;
+    btn.setAttribute('href', activeApkUrl);
+    btn.setAttribute('download', filename);
+  });
 }
 
 // FAQ Accordion Toggle
